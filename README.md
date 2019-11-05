@@ -13,4 +13,4 @@ Cloud Functions ist eine cloud-basierte und skalierbare Node.js-Umgebung, in der
 Als verteilte, skalierbare NoSQL-Datenbank wird Cloud Firestore für die Speicherung und Synchronisierung von App-Daten für mobile und Web-Applikationen verwendet. [Google Firstore](https://cloud.google.com/firestore/)
 
 ### Cloud Pub/Sub
-bringt die Flexibilität und Zuverlässigkeit von nachrichtenorientierter Middleware für in die Cloud. Mit einem Beispiel wir gezeigt wie Zwei Funktionen durch google Pub/Sub mit einander kommunizieren. [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/)
+ Cloud Pub/Sub bringt die Flexibilität und Zuverlässigkeit von nachrichtenorientierter Middleware in die Cloud. Mit einem Beispiel wir gezeigt wie Zwei Funktionen durch google Pub/Sub mit einander kommunizieren. [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/)
