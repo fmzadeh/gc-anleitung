@@ -5,7 +5,7 @@ Das Zeil dieses Projekt ist die funktionale und nachrichten basierte Etwicklung 
 # Technologien
 Die folgende Technologien werden genutz:
 
-### Google Cloud Function
+### Google Cloud Functions
 Cloud Functions ist eine cloud-basierte und skalierbare Node.js-Umgebung, in der  JavaScript-Code als eigenstaendige Funktionen ausführen deployert und ausgefürt werden können. Mit ein Paar Beispiele wird gezeigt wie JavaScript Funtionen durch HTTP Anfragen oder andere Art von Events ausgefürt werden.
 [Google Cloud Functions](https://cloud.google.com/functions/)
 
