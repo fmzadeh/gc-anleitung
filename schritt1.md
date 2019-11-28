@@ -45,8 +45,12 @@ npm install -g firebase-tools
 4- Login und test
 ```
 firebase login
+firebase projects:list
 ```
-
+<br/>
+<img src="./images/5-firebase-listp.png" width="700" height="150" />
+<br/>
+<br/>
 
 ### Node js -> nvm, npm
 ### firebase tools
