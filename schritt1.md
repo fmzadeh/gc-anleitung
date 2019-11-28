@@ -56,9 +56,24 @@ firebase projects:list
 ```
 firebase init
 ```
-Wir wählen **Functions** aus wie folgendes:
+Wir wählen Cloud **Functions** aus wie folgendes:
 <br/>
 <br/>
 <img src="./images/6-firebase-init-1.png" width="700" height="250" />
 <br/>
 <br/>
+Da wir bereits ein Projekt durch Firebase Console angelegt haben, wählen wir die Option "Use an existing projekt" aus:
+<br/>
+<br/>
+<img src="./images/7-firebase-init-2.png" width="700" height="150" />
+<br/>
+<br/>
+
+Da wir unsere Funktionen mit TypeScript implementieren wollen, wählen wir **Typescript** als Programiersprache aus:
+<br/>
+<br/>
+<img src="./images/8-firebase-init-3.png" width="700" height="125" />
+<br/>
+<br/>
+
+Die Struktur des angelegten Projekts wird wie hier aussehen: [src](https://github.com/fmzadeh/gc-anleitung/tree/393bdbfd660ac8e261fbd6d2e530ac3ac170c43c/src)
