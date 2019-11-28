@@ -11,6 +11,7 @@ Nach dem einloggen kann man ein neues Projekt anlegen:
 <br/>
 Als nächstes geben wir dem Projekt einen Namen:
 <br/>
+<br/>
 <img src="./images/2-newproject-name.png" width="600" height="250" />
 <br/>
 <br/>
