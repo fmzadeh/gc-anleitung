@@ -52,6 +52,13 @@ firebase projects:list
 <br/>
 <br/>
 
-### Node js -> nvm, npm
-### firebase tools
-### initialize projekt, deploy first version
+### Projekt Initializierung
+```
+firebase init
+```
+Wir wählen **Functions** aus wie folgendes:
+<br/>
+<br/>
+<img src="./images/6-firebase-init-1.png" width="700" height="250" />
+<br/>
+<br/>
