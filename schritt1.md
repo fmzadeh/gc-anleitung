@@ -4,6 +4,9 @@
 Auf google firebase console mit einem Google Acccount wie z.B. ein gmail account einloggen: https://console.firebase.google.com
 
 Nach dem einloggen kann man ein neues Projekt anlegen:
+<br/>
+<br/>
+
 <img src="./images/1-newproject.png" width="350" height="250" />
 <br/>
 <br/>
