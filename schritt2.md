@@ -1,36 +1,36 @@
 # Schritt 2: Implementierung von ggt
-Mit Cloud-Funktionen von Firebase kann man automatisch Back-End-Code als Reaktion auf Ereignisse ausführen, die durch Firebase-Funktionen und HTTPS-Anfragen ausgelöst werden. Der Code wird in der Google-Cloud gespeichert und in einer verwalteten Umgebung, die automatisch skaliert , ausgeführt.
+Mit Cloud-Funktionen von Firebase kann man automatisch Back-End-Code als Reaktion auf Ereignisse ausführen, die durch Firebase-Funktionen und HTTPS-Anfragen ausgelöst werden. Der Code wird in der Google-Cloud gespeichert und in einer verwalteten Umgebung, die automatisch skaliert, ausgeführt.
 
-Die Google Funktionen koennen durch unterscheidliche Errignisse ausgefuert werden. In diesem Schritt bescaeftigen wir uns nur mit dem HTTP-Triggers.
+Die Google Funktionen können durch die  unterschiedlichen Ereignisse ausgefürt werden. In diesem Schritt beschäftigen wir uns nur mit dem HTTP-Triggers.
 
-Eine https funktion wird als Folgendes implementiert:
+Eine HTTPS Funktion wird als Folgendes implementiert:
 ```
 exports.date = functions.https.onRequest((req, res) => {
   // ...
 });
 ```
 
-## Implementierung von ggt cloud funktion
+## Implementierung von ggT cloud Funktion
 
-### /ggt API:
+### /ggT API:
 
-Dieser API nimmt Zwei Zahlen als Eingaben, berechnet den grössten gemeinsamen Teiler , speichert die Historie der Berechnung in der Google Firestore DB und gibt das Ergebniss zurueck an den Client.
+Dieser API nimmt zwei Zahlen als Eingaben, berechnet den größten gemeinsamen Teiler , speichert die Historie der Berechnung in der Google Firestore DB und gibt das Ergebnis an den Client zurück.
 
-Wir implementieren eine cloud Function indem index.ts Datei mit folgendem Struktur:
+Wir implementieren eine cloud Function in der index.ts Datei mit dem folgenden Struktur:
 
 ```
 export const ggt = functions.https.onRequest(async (request, response)  => {
   ...
 }
 ```
-nach dem Deplyment wird die Funktion unter dem folgenden URL erreichbar:
+Nach dem Deplyment ist die Funktion unter dem folgenden URL erreichbar:
 
 ```
 https://<region>-<project-id>.cloudfunctions.net/ggt
 // https://us-central1-fhsample-dev.cloudfunctions.net/ggt
 ```
 
-Die vollstaendige Implementierung ist als Folgendes:
+Die vollständige Implementierung ist Folgendes:
 ```
 import * as functions from 'firebase-functions';
 import *  as admin from 'firebase-admin';
@@ -84,10 +84,10 @@ export const ggt = functions.https.onRequest(async (request, response)  => {
   }
 });
 ```
-Die Funktion **ggtBerechnen** nimmt zwei Zahlen und berechnet den geroesten gemeinsamen Teiler als Ergebnis und die Funktion **writeDB** schreibt die Eingaben und das Ergebniss in die Firestore-Datenbank als Historie der Berechnung.
+Die Funktion **ggtBerechnen** nimmt zwei Zahlen und berechnet den gerößten gemeinsamen Teiler als Ergebnis und die Funktion **writeDB** schreibt die Eingaben und das Ergebnis in die Firestore-Datenbank als Historie der Berechnung.
 
 ### /ggt_history API
-Gibt liest die Historie von alle Methodenaufrufe von /ggt API von der Firestore-Datenbank und gibt sie zurueck.
+Liest die Historie der allen Methodenaufrufen von /ggt API aus der Firestore-Datenbank und gibt sie als Ergebnis zurück.
 ```
 export const ggt_history = functions.https.onRequest(async (request, response) => {
   const historiesRef = db.collection('history').orderBy('datetime', 'desc').limit(10);
