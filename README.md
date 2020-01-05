@@ -18,17 +18,17 @@ Als verteilte, skalierbare NoSQL-Datenbank wird Cloud Firestore für die Speiche
 # Vorgehensweise
 Alle Schritte werden detailiert dokumentiert werden.
 
-### Schritt 1: Projekt Setup
+### [Schritt 1: Projekt Setup](schritt1.md)
 - Setup von Google Cloud Projekt auf Google Cloud Console (Projekt anlegen, Sicherheitskonfiguration etc.)
 - Setup von Entwicklungsumgebung auf dem Laptop ( Setup von Nodejs und Typescript, google cloud sdk etc.)
 
-### Schritt 2: Implementierung von Ggt
+### [Schritt 2: Implementierung von Ggt](schritt2.md)
 Hier werden zwei Funktionen implementiert die jeweils als eine API exponiert werden:
 - **/ggt API**: Dieser API nimmt Zwei Zahlen als Eingaben, berechnet den grössten gemeinsamen Teiler , speichert die Historie der Berechnung in der Google Firestore DB und gibt das Ergebniss zurueck an den Client.
 
 - **/ggt/history API**: Gibt die Historie alle Methodenaufrufe von /ggt API zurueck.
 
-### Schritt 3: Nachrichten durch  Pub/Sub
+### [Schritt 3: Nachrichten durch  Pub/Sub](schritt3.md)
 In diesem Schritt werden drei Funktionen implementiert.
 - **/publisher**: Dieser API bekommt einen Text als Eingabe und schreibt ihn als eine Nachricht in den Topic testtopic ins Pub/Sub System.
 - **subscriber**: subscribiert sich an testtopic, bekommt die Nachrichten und schribt sie in die datenbank.
